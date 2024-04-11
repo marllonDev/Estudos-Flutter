@@ -32,7 +32,7 @@ class _TelaContadorState extends State<TelaContador> {
         body: const Center(
           child: BotaoContador(),
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton(// esse é o botão que fica lá em baixo em formato ícone.
           onPressed: _incrementar,
           tooltip: 'Incrementar',
           child: const Icon(Icons.add),
