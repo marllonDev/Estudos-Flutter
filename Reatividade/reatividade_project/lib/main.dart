@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reatividade_project/pages/home_page.dart';
+import 'package:reatividade_project/pages/home_page_v2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo'),
+      home: MyHomePagev2(title: 'Flutter Demo'),
     );
   }
 }

@@ -20,34 +20,45 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text(
+            'You have pushed the button this many times:',
+          ),
+          ListenableBuilder(
+            listenable: counterController,
+            builder: (BuildContext context, Widget? child) {
+              return Text(
+                '${counterController.value}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              );
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 200),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FloatingActionButton(
+                  onPressed: counterController.reset,
+                  tooltip: 'Reset Counter',
+                  child: const Icon(Icons.restart_alt),
+                ),
+                FloatingActionButton(
+                  onPressed: counterController.decrement,
+                  tooltip: 'Decrement',
+                  child: const Icon(Icons.remove),
+                ),
+                FloatingActionButton(
+                  onPressed: counterController.increment,
+                  tooltip: 'Increment',
+                  child: const Icon(Icons.add),
+                ),
+              ],
             ),
-            ListenableBuilder(
-              builder: (BuildContext context, Widget? child) {
-                return Text(
-                  '${counterController.value}',
-                  style: Theme.of(context).textTheme.headlineMedium,
-                );
-              },
-              listenable: counterController,
-            ),
-            FloatingActionButton(
-              onPressed: counterController.decrement,
-              tooltip: 'Decrement',
-              child: const Icon(Icons.remove),
-            )
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: counterController.increment,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }

@@ -17,5 +17,4 @@ class CountControllerV2 extends ChangeNotifier {
     count--;
     notifyListeners();//add notifyListeners para notificar quem ouvir ao clicasr
   }
-  
 }

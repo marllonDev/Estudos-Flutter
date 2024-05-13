@@ -1,16 +1,4 @@
 # reatividade_project
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este projeto fiz para treinar mais sobre Recursividade.
+Primeiro fiz usando o ValueNotify que é menos verboso e coloquei para chamar uma class stateful(se fosse stateless também daría certo). Depois criei outra classe mas dessa vez com ChangeNotify, e chamei numa classe stateless, funcionou perfeitamente. Com isso, só irá rodar aquele único ponto ao invés da tela toda.
